@@ -1,0 +1,800 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+ html {
+     height: 100%;
+}
+           
+:root {
+     --primary-color:#821D30 ;
+     --secondary-color: #9b59b6;
+    --text-color: #171515;
+    --light-gray: #f5f5f5;
+    --border-color: #ddd;
+    --shadow : 0 2px 5px rgba(0,0,0,0.1);
+    --logo-color: #821D30;
+    --link-color: #171515;
+    --link-hover: #4E4F50;
+    --bg-color: #fff;
+  
+}
+
+body {
+    background-color: #fff;
+    color: var(--text-color);
+    font-family: 'Roboto';
+
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Sidebar Styles */
+.profile-sidebar {
+    width: 280px;
+    background: white;
+    border-right: 1px solid var(--border-color);
+    padding: 2rem 0;
+}
+
+.profile-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: var(--light-gray);
+    overflow: visible; 
+    border: 3px solid var(--primary-color); 
+}
+
+.default-profile-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+}
+
+.default-profile-icon i {
+    font-size: 80px;
+    color: #999;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.edit-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: var(--shadow);
+    z-index: 1;
+}
+
+.edit-overlay i {
+    font-size: 16px;
+}
+
+/* Remove the hover rules */
+.profile-image:hover .edit-overlay {
+    opacity: 1;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.user-email {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.profile-nav ul {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.profile-nav li {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.profile-nav li.active {
+    background: var(--light-gray);
+    color: var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.profile-nav i {
+    width: 20px;
+}
+
+/* Main Content Styles */
+.profile-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Button Styles */
+.btn-save, .btn-edit, .btn-delete, .btn-add-cart, .btn-add-address {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-save {
+    background: var(--primary-color);
+    color: white;
+}
+
+
+
+.btn-edit {
+    background: #3498db; 
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background: #2980b9; 
+}
+
+.btn-delete {
+    background: #e74c3c; 
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background: #c0392b; 
+}
+
+.btn-add-cart {
+    background: var(--primary-color);
+    color: white;
+    width: 100%;
+}
+
+.btn-add-address {
+    background: white;
+    color: var(--primary-color);
+    border: 2px dashed var(--primary-color);
+    width: auto; 
+    min-width: 200px; 
+    padding: 1rem 2rem; 
+    display: inline-flex; 
+    align-items: center;
+    gap: 8px;
+    margin: 0; 
+    transition: all 0.3s ease;
+}
+
+.btn-add-address i {
+    font-size: 16px;
+}
+
+.btn-add-address:hover {
+    background: var(--light-gray);
+    transform: scale(1.05);
+}
+
+/* Common list container styles */
+.address-list, .wishlist-list {
+    text-align: center;
+    padding: 2rem;
+    min-height: calc(100vh - 300px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Common button styles for Address and Wishlist */
+.btn-add-address, .btn-add-wishlist {
+    background: white;
+    color: var(--primary-color);
+    border: 2px dashed var(--primary-color);
+    width: auto;
+    min-width: 200px;
+    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 8px;
+    margin: 0;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-add-address i, .btn-add-wishlist i {
+    font-size: 16px;
+}
+
+.btn-add-address:hover, .btn-add-wishlist:hover {
+    transform: scale(1.05);
+}
+
+/* Order Card Styles */
+.order-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;  
+    overflow: hidden;
+}
+
+.order-header {
+    background: var(--light-gray);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-status {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.order-items {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.order-items img {
+    width: 80px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive styles for order items */
+@media screen and (max-width: 768px) {
+    .order-items {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .order-items img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        aspect-ratio: 3/4;
+        margin-bottom: 1rem;
+    }
+
+    .order-details {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .order-items img {
+        max-width: 160px;
+    }
+    
+    .order-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .address-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .address-actions button {
+        flex: 1;
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .address-card {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Wishlist Styles */
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h4 {
+    padding: 1rem;
+    margin: 0;
+}
+
+.price {
+    padding: 0 1rem 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Switch Styles */
+.switch {
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.slider:before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.slider:after {
+    content: '';
+    position: absolute;
+    left: -48px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider:before {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:after {
+    left: -28px;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content h3 {
+    margin-bottom: 1.5rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-cancel {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: white;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background: white;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Delete Confirmation Modal */
+.modal-content.delete-confirmation {
+    text-align: center;
+    max-width: 400px;
+}
+
+.delete-message {
+    margin: 1.5rem 0;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.btn-confirm-delete {
+    background: #e74c3c;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm-delete:hover {
+    background: #c0392b;
+}
+
+#orders h3, #wishlist h3, #settings h3, #personal-info h3 {
+    margin-bottom: 2rem;  
+}
+
+.settings-form {
+    margin-top: 1rem;
+}
+
+.settings-form .form-group {
+    margin-bottom: 2rem;  
+}
+
+.settings-form .form-group input[type="password"] {
+    margin-bottom: 1rem;  
+}
+
+.settings-form .form-group input[type="password"]:last-of-type {
+    margin-bottom: 0;  
+}
+
+.notification-settings {
+    margin-top: 2rem;  
+}
+
+.notification-settings h4 {
+    margin-bottom: 1.5rem;  
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .container {
+        margin: 1rem;
+        flex-direction: column;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .profile-content {
+        padding: 1.5rem;
+    }
+
+    .wishlist-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .profile-nav ul {
+        display: flex;
+        overflow-x: auto;
+        padding: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .profile-nav li {
+        padding: 0.8rem 1.2rem;
+        white-space: nowrap;
+        border-radius: 20px;
+    }
+
+    .profile-nav li.active {
+        border-left: none;
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .order-items {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .order-items img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        aspect-ratio: 3/4;
+        margin-bottom: 1rem;
+    }
+
+    .order-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .user-name {
+        font-size: 1.2rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.6rem;
+    }
+
+    .btn-save, .btn-edit, .btn-delete {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-actions button {
+        width: 100%;
+    }
+
+    .wishlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .address-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .address-actions button {
+        flex: 1;
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .address-card {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .order-items img {
+        max-width: 160px;
+    }
+    
+    .order-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}
+
+/* Fix for small height screens */
+@media screen and (max-height: 600px) {
+    .profile-sidebar {
+        padding: 1rem 0;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.5rem;
+    }
+
+    .profile-nav li {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.address-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.address-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+/* Responsive styles for address cards */
+@media screen and (max-width: 360px) {
+    .address-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .address-actions button {
+        width: 100%;
+    }
+}
+
+/* Settings Actions Container */
+.settings-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-logout {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background:var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

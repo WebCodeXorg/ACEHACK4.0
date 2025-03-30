@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Responsive viewport setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Naari House - Login/Signup</title>
+    <!-- Stylesheet links -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Main container with split layout -->
+    <div class="container">
+        <!-- Left side - Decorative image section -->
+        <div class="image-container">
+            <img src="assets/img.jpeg" alt="Fashion Image">
+        </div>
+        
+        <!-- Right side - Form container -->
+        <div class="form-container">
+            <!-- Brand heading -->
+            <h1>The Naari House</h1>
+            
+            <!-- Form toggle buttons -->
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" onclick="toggleForm('login')">Login</button>
+                <button class="toggle-btn" onclick="toggleForm('signup')">Sign Up</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="form active">
+                <!-- Email input -->
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <!-- Password input with toggle visibility -->
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <i class="fas fa-eye toggle-password"></i>
+                </div>
+                <!-- Password recovery link -->
+                <div class="forgot-password">
+                    <a href="#" onclick="toggleForm('forgot'); return false;">Forgot Password?</a>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+            <!-- Forgot Password Form -->
+            <form id="forgotPasswordForm" class="form">
+                <h2>Reset Password</h2>
+                <p class="form-description">Enter your email address and we'll send you instructions to reset your password.</p>
+                <!-- Email input -->
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="submit-btn">Send Reset Link</button>
+                <div class="back-to-login">
+                    <a href="#" onclick="toggleForm('login'); return false;">
+                        <i class="fas fa-arrow-left"></i> Back to Login
+                    </a>
+                </div>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="form">
+                <!-- Full Name input -->
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <!-- Email input -->
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <!-- Password input with strength indicator -->
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <i class="fas fa-eye toggle-password"></i>
+                </div>
+                <!-- Password strength indicator bar -->
+                <div class="password-strength">
+                    <div class="password-strength-bar"></div>
+                </div>
+                <!-- Password requirements checklist -->
+                <div class="password-requirements">
+                    <div class="requirement" id="length">
+                        <i class="fas fa-circle"></i>
+                        <span>At least 8 characters</span>
+                    </div>
+                    <div class="requirement" id="uppercase">
+                        <i class="fas fa-circle"></i>
+                        <span>One uppercase letter</span>
+                    </div>
+                    <div class="requirement" id="lowercase">
+                        <i class="fas fa-circle"></i>
+                        <span>One lowercase letter</span>
+                    </div>
+                    <div class="requirement" id="number">
+                        <i class="fas fa-circle"></i>
+                        <span>One number</span>
+                    </div>
+                    <div class="requirement" id="special">
+                        <i class="fas fa-circle"></i>
+                        <span>One special character</span>
+                    </div>
+                </div>
+                <!-- Confirm Password input -->
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <i class="fas fa-eye toggle-password"></i>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Popup Modal -->
+    <div class="popup" id="successPopup">
+        <div class="popup-content">
+            <i class="fas fa-check-circle"></i>
+            <h2 id="popupTitle"></h2>
+            <p id="popupMessage"></p>
+            <button onclick="closePopup()" class="popup-close-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - The Naari House</title>
+    <link rel="stylesheet" href="productDetails.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+     <!-- Main Navigation -->
+     <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>The Naari House</h1>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+            <!-- Dropdown Template - Repeat for other categories -->
+            <div class="dropdown">
+                <a href="#" class="nav-item">New Arrivals <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Latest Collection</a>
+                    <a href="#">Trending Now</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Co-Ord Sets <i="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Casual Sets</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Office Wear</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Western Wear <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Dresses</a>
+                    <a href="#">Tops</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Skirts</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Winter Wear <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Sweaters</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Coats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Sale <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Clearance</a>
+                    <a href="#">Special Offers</a>
+                    <a href="#">Seasonal Sale</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+            <a href="#" class="icon search-toggle"><i class="fas fa-search"></i></a>
+            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" class="icon"><i class="fas fa-user"></i></a>
+            <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search products...">
+            <button class="search-close"><i class="fas fa-times"></i></button>
+            <div class="search-suggestions">
+                <div class="suggestion-group">
+                    <h4>Popular Searches</h4>
+                    <div class="suggestion-items">
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Ethnic Wear</span>
+                        </a>
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Party Wear Dresses</span>
+                        </a>
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Wedding Collection</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="suggestion-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-overlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="cart-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <button class="continue-shopping">Continue Shopping</button>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">₹0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="logo">The Naari House</h1>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-links">
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>New Arrivals</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Latest Collection</a>
+                    <a href="#">Trending Now</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Co-Ord Sets</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Casual Sets</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Office Wear</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Western Wear</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Dresses</a>
+                    <a href="#">Tops</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Skirts</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Winter Wear</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Sweaters</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Coats</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Sale</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Clearance</a>
+                    <a href="#">Special Offers</a>
+                    <a href="#">Seasonal Sale</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-footer">
+            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" class="icon"><i class="fas fa-user"></i></a>
+            <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+        </div>
+    </div>
+    <main class="container" role="main">
+        <div class="product-container">
+            <!-- Product Gallery Section -->
+            <section class="product-gallery" aria-label="Product images">
+                <div class="main-image">
+                    <img src="assets/01.jpg" alt="Detailed view of Product" id="productImage">
+                </div>
+                <div class="thumbnail-container" role="list" aria-label="Product thumbnail images">
+                    <img src="assets/01.jpg" alt="Product Image 1" class="thumbnail active" onclick="changeImage('assets/01.jpg', this)">
+                    <img src="assets/02.jpg" alt="Product Image 2" class="thumbnail" onclick="changeImage('assets/02.jpg', this)">
+                    <img src="assets/03.jpg" alt="Product Image 3" class="thumbnail" onclick="changeImage('assets/03.jpg', this)">
+                    <img src="assets/04.jpg" alt="Product Image 4" class="thumbnail" onclick="changeImage('assets/04.jpg', this)">
+                </div>
+            </section>
+
+            <!-- Product Information Section -->
+            <section class="product-info" aria-label="Product details">
+                <h1 class="product-title" aria-label="Product name">Floral Print Dress</h1>
+                <div class="product-price-section">
+                    <div class="product-price" aria-label="Product price">₹1999</div>
+                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="product-size" role="group" aria-labelledby="size-heading">
+                    <h3 id="size-heading">Size:</h3>
+                    <div class="size-options">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                    <div class="stock-status" style="display: none;">
+                        <div class="stock-info">
+                            <span class="pieces-left">5 pieces left</span>
+                            <span class="hurry-text">Hurry up!</span>
+                        </div>
+                        <div class="stock-progress-container">
+                            <div class="stock-progress-bar" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity" role="group" aria-labelledby="quantity-heading">
+                    <div class="quantity-header">
+                        <h3 id="quantity-heading">Quantity:</h3>
+                        <button class="digital-mirror-btn" aria-label="Try virtual mirror">
+                            <i class="fas fa-camera"></i>
+                            <span>Try virtual</span>
+                        </button>
+                    </div>
+                    <div class="quantity-selector">
+                        <button id="decreaseQty" aria-label="Decrease quantity">-</button>
+                        <input type="number" id="qtyInput" value="1" min="1" aria-label="Quantity">
+                        <button id="increaseQty" aria-label="Increase quantity">+</button>
+                    </div>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to shopping cart">Add to Cart</button>
+                
+                <!-- Offers Section -->
+                <section class="offers-section" aria-label="Available offers">
+                    <button class="offers-toggle">
+                        <span>Available Offers</span>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="offers-content">
+                        <ul class="offers-list">
+                            <li>
+                                <span class="offer-icon"><i class="fas fa-tag"></i></span>
+                                Get 10% off on first purchase
+                            </li>
+                            <li>
+                                <span class="offer-icon"><i class="fas fa-credit-card"></i></span>
+                                Extra 5% off on all credit card payments
+                            </li>
+                            <li>
+                                <span class="offer-icon"><i class="fas fa-gift"></i></span>
+                                Buy 2 get 1 free on selected items
+                            </li>
+                            <li>
+                                <span class="offer-icon"><i class="fas fa-truck"></i></span>
+                                Free delivery on orders above ₹999
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Delivery Section -->
+                <section class="delivery-section" aria-label="Check delivery availability">
+                    <h3 class="delivery-title">Check Delivery Availability</h3>
+                    <div class="delivery-content">
+                        <div class="pincode-input-container">
+                            <input type="text" 
+                                   id="pincodeInput" 
+                                   placeholder="Enter Pincode" 
+                                   maxlength="6" 
+                                   pattern="[0-9]*">
+                            <button id="checkDelivery">Check</button>
+                        </div>
+                        <div id="deliveryResult" class="delivery-result"></div>
+                    </div>
+                </section>
+
+                <!-- Product Information Tabs -->
+                <section class="product-info-sections" aria-label="Additional product information">
+                    <!-- Description Section -->
+                    <div class="info-section">
+                        <button class="info-toggle">
+                            <span>Description</span>
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="info-content">
+                            <p>This beautiful handcrafted piece represents the finest in traditional artisanship. Made with premium quality materials, this product showcases intricate detailing and expert craftsmanship. Perfect for both casual and formal occasions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Care Guide Section -->
+                    <div class="info-section">
+                        <button class="info-toggle">
+                            <span>Care Guide</span>
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="info-content">
+                            <ul class="care-list">
+                                <li>Hand wash with cold water</li>
+                                <li>Do not bleach</li>
+                                <li>Dry in shade</li>
+                                <li>Iron on medium heat if needed</li>
+                                <li>Store in a cool, dry place</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information Section -->
+                    <div class="info-section">
+                        <button class="info-toggle">
+                            <span>Additional Information</span>
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="info-content">
+                            <table class="info-table">
+                                <tr>
+                                    <td>Material</td>
+                                    <td>100% Cotton</td>
+                                </tr>
+                                <tr>
+                                    <td>Style</td>
+                                    <td>Traditional</td>
+                                </tr>
+                                <tr>
+                                    <td>Made In</td>
+                                    <td>India</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+
+        <!-- Recommended Products Section -->
+        <section class="recommended-section" aria-label="Recommended products">
+            <h2 class="recommended-title">Recommended Products</h2>
+            <div class="recommended-container">
+                <button class="nav-btn prev-btn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                <div class="recommended-products">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/01.jpg" alt="Product 1" loading="lazy">
+                        </div>
+                        <div class="product-details">
+                            <h3>Floral Print Dress</h3>
+                            <p class="price">₹1,499</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/02.jpg" alt="Product 2" loading="lazy">
+                        </div>
+                        <div class="product-details">
+                            <h3>Summer Collection</h3>
+                            <p class="price">₹1,299</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/03.jpg" alt="Product 3" loading="lazy">
+                        </div>
+                        <div class="product-details">
+                            <h3>Casual Wear</h3>
+                            <p class="price">₹999</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/04.jpg" alt="Product 4" loading="lazy">
+                        </div>
+                        <div class="product-details">
+                            <h3>Party Wear</h3>
+                            <p class="price">₹1,899</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/05.jpg" alt="Product 5" loading="lazy">
+                        </div>
+                        <div class="product-details">
+                            <h3>Traditional Dress</h3>
+                            <p class="price">₹2,199</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/06.jpg" alt="Product 6" loading="lazy">
+                        </div>
+                        <div class="product-details">
+                            <h3>Designer Collection</h3>
+                            <p class="price">₹2,499</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/07.jpg" alt="Product 7" loading="lazy">
+                        </div>
+                        <div class="product-details">
+                            <h3>Wedding Collection</h3>
+                            <p class="price">₹3,999</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/08.jpg" alt="Product 8" loading="lazy">
+                        </div>
+                        <div class="product-details">
+                            <h3>Ethnic Wear</h3>
+                            <p class="price">₹1,799</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-btn next-btn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+     <!-- FOOTER  -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-column brand-column">
+                <h3 class="footer-logo">The Naari House</h3>
+                <p class="footer-tagline">Empowering Women Through Fashion</p>
+                <p class="footer-address">123 Fashion Street, Style Avenue<br>Mumbai, Maharashtra 400001</p>
+                <p class="footer-contact">
+                    <span>Email: info@thenaarihouseweb.com</span><br>
+                    <span>Phone: +91 (123) 456-7890</span>
+                </p>
+            </div>
+            
+            <!-- Categories Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Categories
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Co-Ord Sets</a></li>
+                    <li><a href="#">Western Wear</a></li>
+                    <li><a href="#">Winter Wear</a></li>
+                    <li><a href="#">Traditional Wear</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Information Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Information
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                
+                </ul>
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Customer Service
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">My Account</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+ 
+        <!-- Copyright Bar -->
+        <div class="footer-bottom">
+            <p class="copy-right">&copy; 2024 The Naari House. All Rights Reserved.</p>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="productDetails.js"></script>
+</body>
+</html>

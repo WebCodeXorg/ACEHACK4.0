@@ -1,0 +1,136 @@
+:root {
+    --logo-color: #821D30;
+    --link-color: #171515;
+    --link-hover: #4E4F50;
+    --bg-color: #fff;
+    --primary-color: #333;
+    --text-color: #fff;
+    --shadow : 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto";
+    background-color: var(--bg-color);
+
+}
+
+/* Main Content Styles */
+.return-policy-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--link-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.policy-section {
+    background: var(--bg-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow:var(--shadow);
+}
+
+h2 {
+    color: var(--link-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.step {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-radius: 8px;
+}
+
+.step i {
+    font-size: 2.5rem;
+    color: var(--logo-color);
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    color: var(--link-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Lists */
+.refund-list, .non-returnable-list {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.refund-list li, .non-returnable-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-btn {
+    background-color: var(--logo-color);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .policy-section {
+        padding: 1.5rem;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .policy-section {
+        padding: 1rem;
+    }
+}

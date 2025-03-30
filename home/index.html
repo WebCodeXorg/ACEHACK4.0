@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Naari House - Fashion Store</title>
+    
+    <!-- External Resources -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Navigation -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>The Naari House</h1>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+            <!-- Dropdown Template - Repeat for other categories -->
+            <div class="dropdown">
+                <a href="#" class="nav-item">New Arrivals <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Latest Collection</a>
+                    <a href="#">Trending Now</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Co-Ord Sets <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Casual Sets</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Office Wear</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Western Wear <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Dresses</a>
+                    <a href="#">Tops</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Skirts</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Winter Wear <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Sweaters</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Coats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Sale <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Clearance</a>
+                    <a href="#">Special Offers</a>
+                    <a href="#">Seasonal Sale</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+            <a href="#" class="icon search-toggle"><i class="fas fa-search"></i></a>
+            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="../profile/index.html"target="_blank" class="icon"><i class="fas fa-user"></i></a>
+            <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search products...">
+            <button class="search-close"><i class="fas fa-times"></i></button>
+            <div class="search-suggestions">
+                <div class="suggestion-group">
+                    <h4>Popular Searches</h4>
+                    <div class="suggestion-items">
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Ethnic Wear</span>
+                        </a>
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Party Wear Dresses</span>
+                        </a>
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Wedding Collection</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="suggestion-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-overlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="cart-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <button class="continue-shopping">Continue Shopping</button>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">₹0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="logo">The Naari House</h1>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-links">
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>New Arrivals</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Latest Collection</a>
+                    <a href="#">Trending Now</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Co-Ord Sets</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Casual Sets</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Office Wear</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Western Wear</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Dresses</a>
+                    <a href="#">Tops</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Skirts</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Winter Wear</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Sweaters</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Coats</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Sale</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Clearance</a>
+                    <a href="#">Special Offers</a>
+                    <a href="#">Seasonal Sale</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-footer">
+            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="../profile/index.html" class="icon"><i class="fas fa-user"></i></a>
+            <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/hero1.jpg" alt="Hero Image 1">
+                </div>
+                <div class="slide">
+                    <img src="assets/hero2.jpg" alt="Hero Image 2">
+                </div>
+                <div class="slide">
+                    <img src="assets/hero3.jpg" alt="Hero Image 3">
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals">
+        <h2 class="section-title">New Arrivals</h2>
+        <p class="section-description">Discover our latest collection of elegant ethnic wear.</p>
+        
+        <!-- Product Grid -->
+        <div class="products-grid">
+            <!-- Product Card Template -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="assets/01.jpg" alt="Product 1" class="primary-image">
+                    <img src="assets/01h.jpg" alt="Product 1 Hover" class="secondary-image">
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="product-info">
+                    <span class="brand">The Naari House</span>
+                    <h3 class="product-name"> Embroidered Kurti</h3>
+                    <span class="price">₹1,299</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="assets/02.jpg" alt="Product 2" class="primary-image">
+                    <img src="assets/02h.jpg" alt="Product 2 Hover" class="secondary-image">
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="product-info">
+                    <span class="brand">The Naari House</span>
+                    <h3 class="product-name">Floral Print Anarkali</h3>
+                    <span class="price">₹1,499</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="assets/03.jpg" alt="Product 3" class="primary-image">
+                    <img src="assets/03h.jpg" alt="Product 3 Hover" class="secondary-image">
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="product-info">
+                    <span class="brand">The Naari House</span>
+                    <h3 class="product-name">Designer Party Wear Suit</h3>
+                    <span class="price">₹2,199</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="assets/04.jpg" alt="Product 4" class="primary-image">
+                    <img src="assets/04h.jpg" alt="Product 4 Hover" class="secondary-image">
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="product-info">
+                    <span class="brand">The Naari House</span>
+                    <h3 class="product-name">Ethnic Palazzo Set</h3>
+                    <span class="price">₹1,899</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="assets/05.jpg" alt="Product 5" class="primary-image">
+                    <img src="assets/05h.jpg" alt="Product 5 Hover" class="secondary-image">
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="product-info">
+                    <span class="brand">The Naari House</span>
+                    <h3 class="product-name">Stylish Cotton Salwar</h3>
+                    <span class="price">₹1,599</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="assets/06.jpg" alt="Product 6" class="primary-image">
+                    <img src="assets/06h.jpg" alt="Product 6 Hover" class="secondary-image">
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="product-info">
+                    <span class="brand">The Naari House</span>
+                    <h3 class="product-name">Designer Saree</h3>
+                    <span class="price">₹2,499</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="assets/07.jpg" alt="Product 7" class="primary-image">
+                    <img src="assets/07h.jpg" alt="Product 7 Hover" class="secondary-image">
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="product-info">
+                    <span class="brand">The Naari House</span>
+                    <h3 class="product-name">Printed Lehenga Set</h3>
+                    <span class="price">₹3,999</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="assets/08.jpg" alt="Product 8" class="primary-image">
+                    <img src="assets/08h.jpg" alt="Product 8 Hover" class="secondary-image">
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="product-info">
+                    <span class="brand">The Naari House</span>
+                    <h3 class="product-name">Embellished Gown</h3>
+                    <span class="price">₹2,999</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all-container">
+            <button class="view-all-btn">View All</button>
+        </div>
+    </section>
+
+    <!-- Panda Section -->
+    <section class="panda-section">
+        <div class="panda-container">
+            <div class="panda-image">
+                <img src="assets/panda.png" alt="Panda">
+            </div>
+            <div class="panda-content">
+                <h2>Welcome to The Naari House</h2>
+                <p>Discover our latest collection of elegant ethnic wear, designed to make every woman feel beautiful and confident. We blend traditional aesthetics with modern comfort to create pieces that are perfect for any occasion.</p>
+                <p>Our commitment to quality and style ensures that each garment tells a unique story, celebrating the grace and strength of every woman who wears it.</p>
+                <button class="explore-btn">Explore More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fresh Off The Runway Section -->
+    <section class="runway-section">
+        <div class="runway-container">
+            <h2 class="section-title">Fresh Off The Runway</h2>
+            <p class="section-description">Discover our latest fashion-forward designs straight from the runway</p>
+            
+            <div class="runway-slider">
+                <div class="runway-track">
+                    <!-- Runway Card 1 -->
+                    <div class="runway-card">
+                        <div class="image-container">
+                            <img src="assets/01.jpg" alt="Runway 1" class="primary-image">
+                            <img src="assets/01h.jpg" alt="Runway 1 Hover" class="secondary-image">
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">The Naari House</span>
+                            <h3 class="product-name">Designer Evening Gown</h3>
+                            <span class="price">₹4,999</span>
+                        </div>
+                    </div>
+
+                    <!-- Runway Card 2 -->
+                    <div class="runway-card">
+                        <div class="image-container">
+                            <img src="assets/02.jpg" alt="Runway 2" class="primary-image">
+                            <img src="assets/02h.jpg" alt="Runway 2 Hover" class="secondary-image">
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">The Naari House</span>
+                            <h3 class="product-name">Luxury Party Wear</h3>
+                            <span class="price">₹5,499</span>
+                        </div>
+                    </div>
+
+                    <!-- Runway Card 3 -->
+                    <div class="runway-card">
+                        <div class="image-container">
+                            <img src="assets/03.jpg" alt="Runway 3" class="primary-image">
+                            <img src="assets/03h.jpg" alt="Runway 3 Hover" class="secondary-image">
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">The Naari House</span>
+                            <h3 class="product-name">Bridal Collection</h3>
+                            <span class="price">₹6,999</span>
+                        </div>
+                    </div>
+
+                    <!-- Runway Card 4 -->
+                    <div class="runway-card">
+                        <div class="image-container">
+                            <img src="assets/04.jpg" alt="Runway 4" class="primary-image">
+                            <img src="assets/04h.jpg" alt="Runway 4 Hover" class="secondary-image">
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">The Naari House</span>
+                            <h3 class="product-name">Designer Saree</h3>
+                            <span class="price">₹7,499</span>
+                        </div>
+                    </div>
+
+                    <!-- Additional Runway Cards 5-8 -->
+                    <div class="runway-card">
+                        <div class="image-container">
+                            <img src="assets/05.jpg" alt="Runway 5" class="primary-image">
+                            <img src="assets/05h.jpg" alt="Runway 5 Hover" class="secondary-image">
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">The Naari House</span>
+                            <h3 class="product-name">Elegant Evening Suit</h3>
+                            <span class="price">₹8,499</span>
+                        </div>
+                    </div>
+
+                    <div class="runway-card">
+                        <div class="image-container">
+                            <img src="assets/06.jpg" alt="Runway 6" class="primary-image">
+                            <img src="assets/06h.jpg" alt="Runway 6 Hover" class="secondary-image">
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">The Naari House</span>
+                            <h3 class="product-name">Premium Party Wear</h3>
+                            <span class="price">₹9,999</span>
+                        </div>
+                    </div>
+
+                    <div class="runway-card">
+                        <div class="image-container">
+                            <img src="assets/07.jpg" alt="Runway 7" class="primary-image">
+                            <img src="assets/07h.jpg" alt="Runway 7 Hover" class="secondary-image">
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">The Naari House</span>
+                            <h3 class="product-name">Wedding Collection</h3>
+                            <span class="price">₹12,999</span>
+                        </div>
+                    </div>
+
+                    <div class="runway-card">
+                        <div class="image-container">
+                            <img src="assets/08.jpg" alt="Runway 8" class="primary-image">
+                            <img src="assets/08h.jpg" alt="Runway 8 Hover" class="secondary-image">
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">The Naari House</span>
+                            <h3 class="product-name">Luxury Bridal Wear</h3>
+                            <span class="price">₹15,999</span>
+                        </div>
+                    </div>
+
+                    <!-- View All Card (Last Card) -->
+                    <div class="runway-card view-all-card">
+                        <div class="view-all-content">
+                            <h3>Discover More</h3>
+                            <p>Explore our complete runway collection</p>
+                            <button class="view-all-btn">View All</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Navigation -->
+                <button class="runway-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="runway-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE NAARI Section -->
+    <section class="naari-section">
+        <div class="naari-container">
+            <h2 class="section-title">WOMEN OF THE NAARI HOUSE</h2>
+            
+            <div class="naari-slider">
+                <div class="naari-track">
+                    <!-- Card 1 -->
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/01.jpg" alt="Naari 1" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Elegant Evening Gown</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Remaining 9 cards with different images and info -->
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/02.jpg" alt="Naari 2" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Designer Party Wear</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards 3-10 with similar structure -->
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/03.jpg" alt="Naari 3" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Premium Bridal Collection</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adding remaining cards -->
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/04.jpg" alt="Naari 4" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Stylish Designer Saree</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/05.jpg" alt="Naari 5" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Elegant Evening Suit</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/06.jpg" alt="Naari 6" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Premium Party Collection</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/07.jpg" alt="Naari 7" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Luxury Wedding Collection</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/08.jpg" alt="Naari 8" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Premium Bridal Wear</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/09.jpg" alt="Naari 9" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Designer Festive Collection</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="naari-card">
+                        <div class="image-container">
+                            <img src="assets/10.jpg" alt="Naari 10" class="primary-image">
+                        </div>
+                        <div class="naari-info">
+                            <h3 class="product-name">Premium Designer Collection</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Navigation -->
+                <button class="naari-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="naari-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Background Section -->
+    <section class="video-section">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="assets/bg-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-content">
+            <h2>Elegance in Every Thread</h2>
+            <p>Discover our timeless collection crafted with love and luxury</p>
+            <button class="video-shop-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">You Are Shopping <span class="experience-text">For An Experience</span></h2>
+        <div class="features-container">
+            <div class="features-track">
+                <div class="feature-item">
+                    <img src="assets/Frame_38 (1).png" alt="Cash On Delivery">
+                    <h3>Cash On Delivery</h3>
+                </div>
+                <div class="feature-item">
+                    <img src="assets/Frame_39 (1).png" alt="Customer Support">
+                    <h3>Customer Support</h3>
+                </div>
+                <div class="feature-item">
+                    <img src="assets/Frame_40 (1).png" alt="Shipping World Wide">
+                    <h3>Shipping World Wide</h3>
+                </div>
+                <div class="feature-item">
+                    <img src="assets/Frame_41 (1).png" alt="Easy Return and Exchange">
+                    <h3>Easy Return and Exchange</h3>
+                </div>
+            </div>
+            <div class="features-dots"></div>
+        </div>
+    </section>
+
+    <!-- HERE FROM Our Customer Section -->
+    <section class="customers-section">
+        <h2 class="section-title">HERE FROM Our Customer</h2>
+        <div class="customers-container">
+            <div class="customers-track">
+                <div class="customer-card">
+                    <div class="customer-profile">
+                        <img src="assets/jenu.jpg" alt="Customer 1">
+                    </div>
+                    <div class="customer-content">
+                        <h3>Jennifer Anderson</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"The quality and design of the clothes are exceptional. I absolutely love every piece I've purchased from The Naari House. Their customer service is outstanding!"</p>
+                    </div>
+                    <img src="assets/quats.png" alt="Quotes" class="quotes-icon">
+                </div>
+
+                <div class="customer-card">
+                    <div class="customer-profile">
+                        <img src="assets/jenu.jpg" alt="Customer 2">
+                    </div>
+                    <div class="customer-content">
+                        <h3>Sarah Mitchell</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"I'm impressed by the attention to detail in every garment. The fits are perfect, and the styles are unique. Will definitely shop here again!"</p>
+                    </div>
+                    <img src="assets/quats.png" alt="Quotes" class="quotes-icon">
+                </div>
+
+                <div class="customer-card">
+                    <div class="customer-profile">
+                        <img src="assets/jenu.jpg" alt="Customer 3">
+                    </div>
+                    <div class="customer-content">
+                        <h3>Emily Watson</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"The Naari House has become my go-to for all special occasions. Their collection is both traditional and modern. Absolutely love it!"</p>
+                    </div>
+                    <img src="assets/quats.png" alt="Quotes" class="quotes-icon">
+                </div>
+            </div>
+            
+            <!-- Customer Navigation -->
+            <button class="customer-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="customer-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Stay Connected Section -->
+    <section class="stay-connected">
+        <h2 class="section-title">Stay Connected</h2>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" class="social-link">
+                <i class="fab fa-facebook"></i>
+                <span class="social-name">#Facebook</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+                <span class="social-name">#Instagram</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+                <span class="social-name">#LinkedIn</span>
+            </a>
+            <a href="https://pinterest.com" target="_blank" class="social-link">
+                <i class="fab fa-pinterest-p"></i>
+                <span class="social-name">#Pinterest</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Get on the List Section -->
+    <section class="get-on-list">
+        <div class="list-container">
+            <h2 class="section-title">Get on the List</h2>
+            <p class="section-description">Sign up for weekly newsletters to receive information about the new arrivals, future events and specials discounts.</p>
+            <form class="signup-form" onsubmit="return validateForm(event)">
+                <input type="email" placeholder="Enter your email" class="email-input" required>
+                <button type="submit" class="signup-btn">SIGN ME UP!</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Signup Success Popup -->
+    <div class="popup-overlay"></div>
+    <div class="signup-popup">
+        <button class="popup-close"><i class="fas fa-times"></i></button>
+        <h3>Thank You!</h3>
+        <p>You have successfully subscribed to our newsletter. Stay tuned for updates about new arrivals, events, and special discounts!</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-column brand-column">
+                <h3 class="footer-logo">The Naari House</h3>
+                <p class="footer-tagline">Empowering Women Through Fashion</p>
+                <p class="footer-address">123 Fashion Street, Style Avenue<br>Mumbai, Maharashtra 400001</p>
+                <p class="footer-contact">
+                    <span>Email: info@thenaarihouseweb.com</span><br>
+                    <span>Phone: +91 (123) 456-7890</span>
+                </p>
+            </div>
+
+            <!-- Categories Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Categories
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Co-Ord Sets</a></li>
+                    <li><a href="#">Western Wear</a></li>
+                    <li><a href="#">Winter Wear</a></li>
+                    <li><a href="#">Traditional Wear</a></li>
+                
+                </ul>
+            </div>
+
+            <!-- Information Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Information
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="../about/about.html" target="_blank">About Us</a></li>
+                    <li><a href="../private-policy/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="../termand-condition/index.html" target="_blank">Terms & Conditions</a></li>
+                    <li><a href="../shpping-policy/index.html" target="_blank">Shipping Policy</a></li>
+                    <li><a href="../return-policy/index.html" target="_blank">Return Policy</a></li>
+                
+                </ul>
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Customer Service
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="../contact/contact.html" target="_blank">Contact Us</a></li>
+                    <li><a href="../track-order/index.html" target="_blank">Track Order</a></li>
+                    <li><a href="../size-guid/index.html" target="_blank">Size Guide</a></li>
+                    <li><a href="../faqs/faqs.html" target="_blank">FAQs</a></li>
+                    <li><a href="../profile/index.html" target="_blank">My Account</a></li>
+                    <li><a href="../chat-support/index.html" target="_blank">NAARI HOUSE Chat Bot</a></li>
+
+                
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="footer-bottom">
+            <p class="copy-right">&copy; 2024 The Naari House. All Rights Reserved.</p>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

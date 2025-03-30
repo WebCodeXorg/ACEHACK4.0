@@ -1,0 +1,286 @@
+:root {
+    --logo-color: #821D30;
+    --link-color: #171515;
+    --link-hover: #4E4F50;
+    --bg-color: #fff;
+    --primary-color: #333;
+    --text-color: #fff;
+    --shadow : 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto";
+    background-color: var(--bg-color);
+
+}
+/* Main container wrapper */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header section styles */
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: var(--link-color);
+}
+
+/* Grid layout for main content */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Card styles for info and form sections */
+.info-card, .form-card {
+    background: var(--text-color);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+/* Card headers */
+.info-card h2, .form-card h2 {
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--link-color);
+}
+
+/* Support text style */
+.support-text {
+    color: var(--link-hover);
+    margin-bottom: 30px;
+}
+
+/* Contact details section */
+.contact-details {
+    margin-bottom: 40px;
+}
+
+/* Individual contact item styles */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for contact items */
+.contact-item:hover {
+    background: rgba(197, 164, 145, 0.1);
+}
+
+/* Contact item icon styles */
+.contact-item i {
+    font-size: 20px;
+    color: var(--logo-color);
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+/* Contact item text styles */
+.contact-item h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: var(--link-hover);
+    font-size: 0.95em;
+    margin-bottom: 2px;
+}
+
+/* Timing information style */
+.timing {
+    font-size: 0.85em;
+    color: var(--link-hover);
+    font-style: italic;
+}
+
+/* Social links section */
+.social-links h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Social icons container */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Individual social icon styles */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--logo-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Social icon hover effects */
+.social-icon:hover {
+    background: var(--logo-color);
+    color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+/* Form Styles */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Form group containing input and label */
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Input field styles */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 0.95em;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+/* Custom select dropdown styling */
+.form-group select {
+    appearance: none;
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.5l-6-6h12l-6 6z'/%3E%3C/svg%3E"); */
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    cursor: pointer;
+}
+
+/* Floating label styles */
+.form-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: var(--bg-color);
+    padding: 0 5px;
+}
+
+/* Adjust label position for textarea */
+.form-group textarea ~ label {
+    top: 12px;
+    transform: none;
+}
+
+/* Focus states for form elements */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--logo-color);
+    outline: none;
+
+}
+
+/* Active state for floating labels */
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group select:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:valid ~ label,
+.form-group select:valid ~ label {
+    top: -10px;
+    font-size: 0.85em;
+    color: var(--logo-color);
+}
+
+/* Submit button styles */
+.submit-btn {
+    background: var(--logo-color);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Submit button hover effects */
+.submit-btn:hover {
+    background: var(--logo-color);
+    transform: translateY(-2px);
+}
+
+/* Submit button icon animation */
+.submit-btn i {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card, .form-card {
+        padding: 30px;
+    }
+}

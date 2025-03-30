@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Policy - Your Fashion Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <!-- Main Navigation -->
+     <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>The Naari House</h1>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+            <!-- Dropdown Template - Repeat for other categories -->
+            <div class="dropdown">
+                <a href="#" class="nav-item">New Arrivals <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Latest Collection</a>
+                    <a href="#">Trending Now</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Co-Ord Sets <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Casual Sets</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Office Wear</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Western Wear <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Dresses</a>
+                    <a href="#">Tops</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Skirts</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Winter Wear <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Sweaters</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Coats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Sale <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Clearance</a>
+                    <a href="#">Special Offers</a>
+                    <a href="#">Seasonal Sale</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+            <a href="#" class="icon search-toggle"><i class="fas fa-search"></i></a>
+            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" class="icon"><i class="fas fa-user"></i></a>
+            <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search products...">
+            <button class="search-close"><i class="fas fa-times"></i></button>
+            <div class="search-suggestions">
+                <div class="suggestion-group">
+                    <h4>Popular Searches</h4>
+                    <div class="suggestion-items">
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Ethnic Wear</span>
+                        </a>
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Party Wear Dresses</span>
+                        </a>
+                        <a href="#" class="suggestion-item">
+                            <i class="fas fa-search"></i>
+                            <span>Wedding Collection</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="suggestion-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-overlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="cart-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <button class="continue-shopping">Continue Shopping</button>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">₹0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="logo">The Naari House</h1>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-links">
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>New Arrivals</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Latest Collection</a>
+                    <a href="#">Trending Now</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Co-Ord Sets</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Casual Sets</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Office Wear</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Western Wear</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Dresses</a>
+                    <a href="#">Tops</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Skirts</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Winter Wear</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Sweaters</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Coats</a>
+                </div>
+            </div>
+            <div class="sidebar-dropdown">
+                <a href="#" class="sidebar-item">
+                    <span>Sale</span>
+                    <i class="fas fa-plus sidebar-toggle-icon"></i>
+                </a>
+                <div class="sidebar-dropdown-content">
+                    <a href="#">Clearance</a>
+                    <a href="#">Special Offers</a>
+                    <a href="#">Seasonal Sale</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-footer">
+            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" class="icon"><i class="fas fa-user"></i></a>
+            <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+        </div>
+    </div>
+    <main class="return-policy-container">
+        <h1>Return Policy</h1>
+        
+        <section class="policy-section">
+            <h2>Return Period</h2>
+            <p>We accept returns within 7 days of delivery. The product must be unused, unworn, and in its original packaging with all tags attached.</p>
+        </section>
+
+        <section class="policy-section">
+            <h2>Return Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <i class="fas fa-box"></i>
+                    <h3>Step 1: Initiate Return</h3>
+                    <p>Contact our customer service team through email or phone to initiate your return request.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Step 2: Package Item</h3>
+                    <p>Pack the item securely in its original packaging with all tags and labels intact.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Step 3: Return Shipping</h3>
+                    <p>Ship the item back using our provided return shipping label or your preferred courier.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <h2>Refund Policy</h2>
+            <ul class="refund-list">
+                <li>Refunds will be processed within 5-7 business days after receiving the returned item</li>
+                <li>The refund will be credited to the original payment method used for purchase</li>
+                <li>Shipping charges are non-refundable unless the return is due to our error</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2>Non-Returnable Items</h2>
+            <ul class="non-returnable-list">
+                <li>Intimates and personal care items</li>
+                <li>Items marked as "Final Sale"</li>
+                <li>Custom-made or altered items</li>
+                <li>Items without original tags and packaging</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2>Need Help?</h2>
+            <div class="contact-section">
+                <p>Our customer service team is here to help you with any questions about returns.</p>
+                <button id="contactBtn" class="contact-btn">Contact Support</button>
+            </div>
+        </section>
+    </main>
+     <!-- FOOTER  -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-column brand-column">
+                <h3 class="footer-logo">The Naari House</h3>
+                <p class="footer-tagline">Empowering Women Through Fashion </p>
+                <p class="footer-address">123 Fashion Street, Style Avenue<br>Mumbai, Maharashtra 400001</p>
+                <p class="footer-contact">
+                    <span>Email: info@thenaarihouseweb.com</span><br>
+                    <span>Phone: +91 (123) 456-7890</span>
+                </p>
+            </div>
+            
+            <!-- Categories Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Categories
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Co-Ord Sets</a></li>
+                    <li><a href="#">Western Wear</a></li>
+                    <li><a href="#">Winter Wear</a></li>
+                    <li><a href="#">Traditional Wear</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Information Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Information
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                
+                </ul>
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Customer Service
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">My Account</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+ 
+        <!-- Copyright Bar -->
+        <div class="footer-bottom">
+            <p class="copy-right">&copy; 2024 The Naari House. All Rights Reserved.</p>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

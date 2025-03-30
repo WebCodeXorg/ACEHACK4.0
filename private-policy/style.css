@@ -1,0 +1,93 @@
+
+:root {
+    --logo-color: #821D30;
+    --link-color: #171515;
+    --link-hover: #4E4F50;
+    --bg-color: #fff;
+    --primary-color: #333;
+    --text-color: #fff;
+    --shadow : 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto";
+    background-color: var(--bg-color);
+
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 10px --shadow;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #eee;
+}
+
+h1 {
+    color: var(--link-color);
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    color: var(--link-hover);
+    font-size: 0.9em;
+}
+
+.policy-section {
+    margin: 30px 0;
+}
+
+.policy-section h2 {
+    color: var(--link-color);
+    margin-bottom: 15px;
+}
+
+.section-content {
+    padding: 0 20px;
+}
+
+ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+.contact {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .section-content {
+        padding: 0 10px;
+    }
+}

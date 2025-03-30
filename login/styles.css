@@ -1,0 +1,393 @@
+:root {
+    --logo-color: #821D30;
+    --link-color: #171515;
+    --link-hover: #4E4F50;
+    --bg-color: #fff;
+    --primary-color: #333;
+    --text-color: #fff;
+    --shadow : 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Center content vertically and horizontally */
+body {
+    font-family: "Roboto";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+/* Main container with split layout */
+.container {
+    display: flex;
+    width: 900px;
+    height: 650px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Left side image styling */
+.image-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right side form container */
+.form-container {
+    flex: 1;
+    padding: 30px;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Brand heading styles */
+h1 {
+    color: var(--link-color);
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Form toggle button styles */
+.toggle-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    color: var(--link-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    color: var(--logo-color);
+    border-bottom: 2px solid var(--logo-color);
+}
+
+/* Form display handling */
+.form {
+    width: 100%;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.form.active {
+    display: block;
+}
+
+/* Form description text */
+.form-description {
+    color: var(--link-hover);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Form headings */
+.form h2 {
+    color: var(--link-color);
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Input group styling */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Input icons positioning */
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--link-color);
+}
+
+/* Password visibility toggle icon */
+.input-group .toggle-password {
+    left: auto;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Input field styling */
+.input-group input {
+    width: 100%;
+    padding: 12px 45px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Input focus state */
+.input-group input:focus {
+    border-color: var(--logo-color);
+    outline: none;
+    box-shadow:var(--shadow);
+}
+
+/* Password requirements section */
+.password-requirements {
+    background: var(--bg-color);
+    padding: 12px;
+    border-radius: 5px;
+    margin: -5px 0 15px;
+    font-size: 13px;
+    border: 1px solid #eee;
+}
+
+/* Individual requirement item */
+.requirement {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+    color: var(--link-hover);
+    transition: all 0.3s ease;
+}
+
+.requirement i {
+    position: static;
+    margin-right: 8px;
+    font-size: 12px;
+    color: var(--link-hover);
+    transition: all 0.3s ease;
+}
+
+/* Requirement validation states */
+.requirement.valid {
+    color: #2ecc71;
+}
+
+.requirement.valid i {
+    color: #2ecc71;
+}
+
+.requirement.invalid {
+    color: #e74c3c;
+}
+
+.requirement.invalid i {
+    color: #e74c3c;
+}
+
+/* Input validation states */
+.input-group.success input {
+    border-color: #2ecc71;
+}
+
+.input-group.error input {
+    border-color: #e74c3c;
+}
+
+/* Password strength indicator */
+.password-strength {
+    height: 4px;
+    margin: -10px 0 15px;
+    border-radius: 2px;
+    background: #eee;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.password-strength-bar {
+    height: 100%;
+    width: 0;
+    transition: all 0.3s ease;
+    background: #e74c3c;
+}
+
+/* Password strength states */
+.password-strength-bar.weak { width: 25%; background: #e74c3c; }
+.password-strength-bar.medium { width: 50%; background: #f1c40f; }
+.password-strength-bar.strong { width: 75%; background: #3498db; }
+.password-strength-bar.very-strong { width: 100%; background: #2ecc71; }
+
+/* Forgot password link */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color:var(--link-hover);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    color: var(--logo-color);
+}
+
+/* Back to login link */
+.back-to-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-login a {
+    color: var(--link-hover);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.back-to-login a i {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.back-to-login a:hover {
+    color: var(--logo-color);
+}
+
+/* Submit button styling */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--logo-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.submit-btn:hover {
+    background: var(--logo-color);
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        max-height: 100vh;
+    }
+
+    .image-container {
+        display: none;
+    }
+
+    .form-container {
+        padding: 20px;
+        height: auto;
+    }
+
+    .password-requirements {
+        margin-bottom: 15px;
+    }
+}
+
+/* Success popup modal */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.active {
+    display: flex;
+}
+
+/* Popup content styling */
+.popup-content {
+    background: var(--bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: popupIn 0.3s ease;
+}
+
+/* Popup animation */
+@keyframes popupIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Popup elements styling */
+.popup-content i {
+    font-size: 50px;
+    color: #2ecc71;
+    margin-bottom: 20px;
+}
+
+.popup-content h2 {
+    color: var(--link-color);
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    color: var(--link-hover);
+    margin-bottom: 20px;
+}
+
+/* Popup close button */
+.popup-close-btn {
+    background: var(--logo-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.popup-close-btn:hover {
+    background: var(--logo-color);
+}

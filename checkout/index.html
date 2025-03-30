@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Thenaari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- Main Navigation -->
+ <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+        <h1>The Naari House</h1>
+    </div>
+    
+    <!-- Desktop Navigation -->
+    <div class="nav-links">
+        <!-- Dropdown Template - Repeat for other categories -->
+        <div class="dropdown">
+            <a href="#" class="nav-item">New Arrivals <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+                <a href="#">Latest Collection</a>
+                <a href="#">Trending Now</a>
+                <a href="#">Best Sellers</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-item">Co-Ord Sets <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+                <a href="#">Casual Sets</a>
+                <a href="#">Party Wear</a>
+                <a href="#">Office Wear</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-item">Western Wear <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+                <a href="#">Dresses</a>
+                <a href="#">Tops</a>
+                <a href="#">Jeans</a>
+                <a href="#">Skirts</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-item">Winter Wear <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+                <a href="#">Sweaters</a>
+                <a href="#">Jackets</a>
+                <a href="#">Coats</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-item">Sale <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+                <a href="#">Clearance</a>
+                <a href="#">Special Offers</a>
+                <a href="#">Seasonal Sale</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Icons -->
+    <div class="nav-icons">
+        <a href="#" class="icon search-toggle"><i class="fas fa-search"></i></a>
+        <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" class="icon"><i class="fas fa-user"></i></a>
+        <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+        <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay">
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search products...">
+        <button class="search-close"><i class="fas fa-times"></i></button>
+        <div class="search-suggestions">
+            <div class="suggestion-group">
+                <h4>Popular Searches</h4>
+                <div class="suggestion-items">
+                    <a href="#" class="suggestion-item">
+                        <i class="fas fa-search"></i>
+                        <span>Ethnic Wear</span>
+                    </a>
+                    <a href="#" class="suggestion-item">
+                        <i class="fas fa-search"></i>
+                        <span>Party Wear Dresses</span>
+                    </a>
+                    <a href="#" class="suggestion-item">
+                        <i class="fas fa-search"></i>
+                        <span>Wedding Collection</span>
+                    </a>
+                </div>
+            </div>
+            <div class="suggestion-results"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Section -->
+<div class="cart-overlay">
+    <div class="cart-container">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <button class="continue-shopping">Continue Shopping</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">₹0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+</div>
+<!-- Mobile Sidebar -->
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h1 class="logo">The Naari House</h1>
+        <button class="close-sidebar">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="sidebar-links">
+        <div class="sidebar-dropdown">
+            <a href="#" class="sidebar-item">
+                <span>New Arrivals</span>
+                <i class="fas fa-plus sidebar-toggle-icon"></i>
+            </a>
+            <div class="sidebar-dropdown-content">
+                <a href="#">Latest Collection</a>
+                <a href="#">Trending Now</a>
+                <a href="#">Best Sellers</a>
+            </div>
+        </div>
+        <div class="sidebar-dropdown">
+            <a href="#" class="sidebar-item">
+                <span>Co-Ord Sets</span>
+                <i class="fas fa-plus sidebar-toggle-icon"></i>
+            </a>
+            <div class="sidebar-dropdown-content">
+                <a href="#">Casual Sets</a>
+                <a href="#">Party Wear</a>
+                <a href="#">Office Wear</a>
+            </div>
+        </div>
+        <div class="sidebar-dropdown">
+            <a href="#" class="sidebar-item">
+                <span>Western Wear</span>
+                <i class="fas fa-plus sidebar-toggle-icon"></i>
+            </a>
+            <div class="sidebar-dropdown-content">
+                <a href="#">Dresses</a>
+                <a href="#">Tops</a>
+                <a href="#">Jeans</a>
+                <a href="#">Skirts</a>
+            </div>
+        </div>
+        <div class="sidebar-dropdown">
+            <a href="#" class="sidebar-item">
+                <span>Winter Wear</span>
+                <i class="fas fa-plus sidebar-toggle-icon"></i>
+            </a>
+            <div class="sidebar-dropdown-content">
+                <a href="#">Sweaters</a>
+                <a href="#">Jackets</a>
+                <a href="#">Coats</a>
+            </div>
+        </div>
+        <div class="sidebar-dropdown">
+            <a href="#" class="sidebar-item">
+                <span>Sale</span>
+                <i class="fas fa-plus sidebar-toggle-icon"></i>
+            </a>
+            <div class="sidebar-dropdown-content">
+                <a href="#">Clearance</a>
+                <a href="#">Special Offers</a>
+                <a href="#">Seasonal Sale</a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-footer">
+        <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" class="icon"><i class="fas fa-user"></i></a>
+        <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+    </div>
+</div>
+<!-- Checkout  -->
+    <div class="checkout-container">
+        <div class="checkout-left">
+            <div class="checkout-header">
+                <h1>Checkout</h1>
+            </div>
+            
+            <!-- Shipping Address Form -->
+            <div class="checkout-section">
+                <h2>Shipping Address</h2>
+                <form id="shipping-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="firstName" required>
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lastName" required>
+                            <label for="lastName">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="address" required>
+                        <label for="address">Address</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="city" required>
+                            <label for="city">City</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="state" required>
+                            <label for="state">State</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="pincode" required>
+                            <label for="pincode">PIN Code</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="checkout-section">
+                <h2>Payment Method</h2>
+                <button id="select-payment-btn" class="select-payment-btn">
+                    <i class="fas fa-wallet"></i>
+                    Select Payment Method
+                </button>
+
+                <!-- Payment Selection Modal -->
+                <div id="payment-modal" class="payment-modal">
+                    <div class="payment-modal-content">
+                        <div class="modal-header">
+                            <h3>Select Payment Method</h3>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="payment-methods">
+                            <div class="payment-method-option" data-method="upi">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>UPI Payment</span>
+                            </div>
+                            <div class="payment-method-option" data-method="card">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Credit/Debit Card</span>
+                            </div>
+                            <div class="payment-method-option" data-method="netbanking">
+                                <i class="fas fa-university"></i>
+                                <span>Net Banking</span>
+                            </div>
+                            <div class="payment-method-option" data-method="cod">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Cash on Delivery</span>
+                            </div>
+                        </div>
+
+                        <!-- Net Banking Banks Section -->
+                        <div id="bank-list" class="bank-logos-grid" style="display: none;">
+                            <div class="bank-logo" data-bank="SBI">
+                                <img src="assets/sbi-logo.png" alt="SBI Bank Logo" class="bank-image">
+                                <span>SBI Bank</span>
+                            </div>
+                            <div class="bank-logo" data-bank="HDFC">
+                                <img src="assets/hdfc-logo.png" alt="HDFC Bank Logo" class="bank-image">
+                                <span>HDFC Bank</span>
+                            </div>
+                            <div class="bank-logo" data-bank="ICICI">
+                                <img src="assets/icici-logo.png" alt="ICICI Bank Logo" class="bank-image">
+                                <span>ICICI Bank</span>
+                            </div>
+                            <div class="bank-logo" data-bank="AXIS">
+                                <img src="assets/axis-logo.png" alt="Axis Bank Logo" class="bank-image">
+                                <span>Axis Bank</span>
+                            </div>
+                            <div class="bank-logo" data-bank="KOTAK">
+                                <img src="assets/kotak-logo.png" alt="Kotak Bank Logo" class="bank-image">
+                                <span>Kotak Bank</span>
+                            </div>
+                            <div class="bank-logo" data-bank="PNB">
+                                <img src="assets/pnb-logo.png" alt="Punjab National Bank Logo" class="bank-image">
+                                <span>Punjab National Bank</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UPI Payment Form -->
+                <div id="upi-form" class="payment-form" style="display: none;">
+                    <div class="form-group">
+                        <input type="text" id="upiId" required>
+                        <label for="upiId">Enter UPI ID (e.g., name@upi)</label>
+                    </div>
+                    <div class="payment-note">
+                        <i class="fas fa-info-circle"></i>
+                        You'll receive a payment request on your UPI app
+                    </div>
+                </div>
+
+                <!-- Card Payment Form -->
+                <div id="card-form" class="payment-form" style="display: none;">
+                    <div class="form-group">
+                        <input type="text" id="cardNumber" required maxlength="19">
+                        <label for="cardNumber">Card Number</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="cardExpiry" required maxlength="5">
+                            <label for="cardExpiry">MM/YY</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="cardCvv" required maxlength="3">
+                            <label for="cardCvv">CVV</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="cardName" required>
+                        <label for="cardName">Name on Card</label>
+                    </div>
+                </div>
+
+                <!-- Net Banking Form -->
+                <div id="netbanking-form" class="payment-form" style="display: none;">
+                    <div class="payment-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>You will be redirected to your bank's website to complete the payment</p>
+                    </div>
+                </div>
+
+                <!-- COD Confirmation -->
+                <div id="cod-form" class="payment-form" style="display: none;">
+                    <div class="cod-message">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Pay ₹1,898 in cash when your order is delivered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="checkout-right">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <!-- Empty Cart State -->
+                <div class="checkout-empty-cart" style="display: none;">
+                    <h2>Your Cart is Empty</h2>
+                    <p>Looks like you haven't added any items to your cart yet.</p>
+                    <a href="/" class="checkout-continue-shopping">
+                        Continue Shopping
+                    </a>
+                </div>
+
+                <!-- Products Container -->
+                <div class="products-container">
+                    <div class="product-preview" data-product-id="1">
+                        <img src="assets/01.jpg" alt="Product Image">
+                        <div class="product-details">
+                            <h3>Black Cotton Dress</h3>
+                            <p>Size: M | Color: Black</p>
+                            <div class="product-actions">
+                                <div class="quantity-controls">
+                                    <button class="qty-btn" data-action="decrease">−</button>
+                                    <span class="quantity">1</span>
+                                    <button class="qty-btn" data-action="increase">+</button>
+                                </div>
+                                <button class="delete-product" title="Remove Item">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <p class="product-price">₹1,999</p>
+                        </div>
+                    </div>
+
+                    <div class="product-preview" data-product-id="2">
+                        <img src="assets/02.jpg" alt="Product Image">
+                        <div class="product-details">
+                            <h3>Floral Summer Dress</h3>
+                            <p>Size: S | Color: Blue</p>
+                            <div class="product-actions">
+                                <div class="quantity-controls">
+                                    <button class="qty-btn" data-action="decrease">−</button>
+                                    <span class="quantity">1</span>
+                                    <button class="qty-btn" data-action="increase">+</button>
+                                </div>
+                                <button class="delete-product" title="Remove Item">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <p class="product-price">₹2,499</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="price-breakdown">
+                    <div class="price-row">
+                        <span>Subtotal</span>
+                        <span>₹1,999</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Shipping</span>
+                        <span>₹99</span>
+                    </div>
+                    <div class="price-row discount">
+                        <span>Discount</span>
+                        <span>-₹200</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total</span>
+                        <span>₹1,898</span>
+                    </div>
+                </div>
+                <button class="place-order-btn">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="success-popup" class="success-popup">
+        <div class="success-popup-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>You will receive a confirmation email shortly.</p>
+            <div class="order-details">
+                <p>Order ID: <span id="order-id"></span></p>
+                <p>Total Amount: ₹1,898</p>
+            </div>
+            <button class="close-popup-btn">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Validation Error Popup -->
+    <div id="error-popup" class="error-popup">
+        <div class="error-popup-content">
+            <div class="error-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h2>Please Fill Required Details</h2>
+            <div class="error-list">
+                <!-- Error messages will be inserted here -->
+            </div>
+            <button class="close-error-popup-btn">OK</button>
+        </div>
+    </div>
+  <!-- FOOTER  -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-column brand-column">
+                <h3 class="footer-logo">The Naari House</h3>
+                <p class="footer-tagline">Empowering Women Through Fashion</p>
+                <p class="footer-address">123 Fashion Street, Style Avenue<br>Mumbai, Maharashtra 400001</p>
+                <p class="footer-contact">
+                    <span>Email: info@thenaarihouseweb.com</span><br>
+                    <span>Phone: +91 (123) 456-7890</span>
+                </p>
+            </div>
+            
+            <!-- Categories Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Categories
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Co-Ord Sets</a></li>
+                    <li><a href="#">Western Wear</a></li>
+                    <li><a href="#">Winter Wear</a></li>
+                    <li><a href="#">Traditional Wear</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Information Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Information
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                
+                </ul>
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column">
+                <div class="footer-title">
+                    Customer Service
+                    <button class="mobile-toggle">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">My Account</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+ 
+        <!-- Copyright Bar -->
+        <div class="footer-bottom">
+            <p class="copy-right">&copy; 2024 The Naari House. All Rights Reserved.</p>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
